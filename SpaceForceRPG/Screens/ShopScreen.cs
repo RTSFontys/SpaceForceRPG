@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SpaceForceRPG
+namespace SpaceForceRPG.Screens
 {
-    public partial class Form1 : Form
+    public partial class ShopScreen : Form
     {
-        public Form1()
+        public ShopScreen()
         {
             InitializeComponent();
         }
