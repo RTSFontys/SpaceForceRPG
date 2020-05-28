@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SpaceForceRPG.Screens
 {
-    public partial class MainMenuScreen : Form
+    public partial class DialogueScreen : Form
     {
-        public MainMenuScreen()
+        public DialogueScreen()
         {
             InitializeComponent();
         }

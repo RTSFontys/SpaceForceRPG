@@ -1,0 +1,12 @@
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\bin\Debug\SpaceForceRPG.exe.config
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\bin\Debug\SpaceForceRPG.exe
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\bin\Debug\SpaceForceRPG.pdb
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.csprojAssemblyReference.cache
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.MainScreen.resources
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.Properties.Resources.resources
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.csproj.GenerateResource.cache
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.exe
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.pdb
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.Screens.BattleScreen.resources
+D:\VisualStudio\Repos\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.Screens.DialogueScreen.resources

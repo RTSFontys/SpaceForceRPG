@@ -16,5 +16,12 @@ namespace SpaceForceRPG.Screens
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenu myform = new MainMenu();
+            this.Hide();
+            this.Show();
+        }
     }
 }
