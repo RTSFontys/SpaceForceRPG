@@ -46,8 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Mannquin.cs" />
+    <Compile Include="Classes\Attacks\AttackController.cs" />
+    <Compile Include="Classes\Attacks\Heal.cs" />
+    <Compile Include="Classes\Attacks\HeavyDamage.cs" />
+    <Compile Include="Classes\Attacks\NormalDamage.cs" />
+    <Compile Include="Classes\Mannequin.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Story\StoryController.cs" />
     <Compile Include="Screens\BattleScreen.cs">
       <SubType>Form</SubType>
     </Compile>

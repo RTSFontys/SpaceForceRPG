@@ -28,25 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Attack1Btn = new System.Windows.Forms.Button();
+            this.Attack2Btn = new System.Windows.Forms.Button();
+            this.HealBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // Attack1Btn
             // 
-            this.button1.Location = new System.Drawing.Point(366, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Attack1Btn.Location = new System.Drawing.Point(249, 372);
+            this.Attack1Btn.Name = "Attack1Btn";
+            this.Attack1Btn.Size = new System.Drawing.Size(75, 23);
+            this.Attack1Btn.TabIndex = 0;
+            this.Attack1Btn.Text = "Attack1";
+            this.Attack1Btn.UseVisualStyleBackColor = true;
+            this.Attack1Btn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Attack2Btn
+            // 
+            this.Attack2Btn.Location = new System.Drawing.Point(330, 372);
+            this.Attack2Btn.Name = "Attack2Btn";
+            this.Attack2Btn.Size = new System.Drawing.Size(75, 23);
+            this.Attack2Btn.TabIndex = 1;
+            this.Attack2Btn.Text = "HeavyAttack1";
+            this.Attack2Btn.UseVisualStyleBackColor = true;
+            // 
+            // HealBtn
+            // 
+            this.HealBtn.Location = new System.Drawing.Point(411, 372);
+            this.HealBtn.Name = "HealBtn";
+            this.HealBtn.Size = new System.Drawing.Size(75, 23);
+            this.HealBtn.TabIndex = 2;
+            this.HealBtn.Text = "Heal1";
+            this.HealBtn.UseVisualStyleBackColor = true;
             // 
             // BattleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HealBtn);
+            this.Controls.Add(this.Attack2Btn);
+            this.Controls.Add(this.Attack1Btn);
             this.Name = "BattleScreen";
             this.Text = "BattleScreen";
             this.ResumeLayout(false);
@@ -55,6 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Attack1Btn;
+        private System.Windows.Forms.Button Attack2Btn;
+        private System.Windows.Forms.Button HealBtn;
     }
 }
