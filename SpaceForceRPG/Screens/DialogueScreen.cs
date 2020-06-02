@@ -16,5 +16,10 @@ namespace SpaceForceRPG.Screens
         {
             InitializeComponent();
         }
+
+        private void DialogueScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
