@@ -121,7 +121,6 @@
             this.Controls.Add(this.healthbar);
             this.Name = "DialogueScreen";
             this.Text = " ";
-            this.Load += new System.EventHandler(this.DialogueScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SpaceForceRPG.Classes.Attacks
 {
-    class HeavyDamage
+    class HeavyDamage : AttackController
     {
+        public HeavyDamage() : base("Shoot", 10, 35, 5, false)
+        {
+
+        }
     }
 }

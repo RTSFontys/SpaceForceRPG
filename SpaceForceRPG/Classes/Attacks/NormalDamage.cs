@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SpaceForceRPG.Classes.Attacks
 {
-    class NormalDamage
+    class NormalDamage : AttackController
     {
+        public NormalDamage() : base("Punch", 10, 35, 5, false)
+        {
+
+        }
     }
 }

@@ -12,14 +12,20 @@ namespace SpaceForceRPG.Screens
 {
     public partial class DialogueScreen : Form
     {
+        RichTextBox story;
         public DialogueScreen()
         {
             InitializeComponent();
+            this.story = richTextBox1;
+
+            writeToTextBox("pepehands");
         }
 
-        private void DialogueScreen_Load(object sender, EventArgs e)
+
+        public void writeToTextBox(string text)
         {
-
+            richTextBox1.Text = text;
         }
+
     }
 }
