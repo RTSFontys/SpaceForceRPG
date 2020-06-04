@@ -8,5 +8,11 @@ namespace SpaceForceRPG.Classes
 {
     class MainController
     {
+        Player player;
+
+        MainController(string playerName)
+        {
+            this.player = new Player(playerName);
+        }
     }
 }

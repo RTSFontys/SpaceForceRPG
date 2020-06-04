@@ -1,4 +1,5 @@
-﻿using SpaceForceRPG.Screens;
+﻿using SpaceForceRPG.Classes;
+using SpaceForceRPG.Screens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,8 +12,9 @@ using System.Windows.Forms;
 
 namespace SpaceForceRPG
 {
-    public partial class MainScreen : Form
+    partial class MainScreen : Form
     {
+        Player player = new Player("test");
         public MainScreen()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace SpaceForceRPG
         private void button1_Click(object sender, EventArgs e)
         {
             DialogueScreen form1 = new DialogueScreen();
+            form1.player = player;
             form1.Show();
             this.Hide();
         }
