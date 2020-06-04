@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceForceRPG.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +11,22 @@ using System.Windows.Forms;
 
 namespace SpaceForceRPG.Screens
 {
-    public partial class DialogueScreen : Form
+    partial class DialogueScreen : Form
     {
+        public Player player { get; set; }
         RichTextBox story;
         public DialogueScreen()
         {
             InitializeComponent();
-            this.story = richTextBox1;
-
+            healthbar.Value = player.GetHealth();
             writeToTextBox("pepehands");
+            writeToTextBox("Oh no we crashed! This is a a a a a a a a a a a a a a a a a  a a a  a a a  a aa  a aa a   very long string");
         }
 
 
         public void writeToTextBox(string text)
         {
-            richTextBox1.Text = text;
+            richTextBox1.Text += text;
         }
 
     }

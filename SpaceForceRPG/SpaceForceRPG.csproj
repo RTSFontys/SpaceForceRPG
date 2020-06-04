@@ -50,6 +50,7 @@
     <Compile Include="Classes\Attacks\Heal.cs" />
     <Compile Include="Classes\Attacks\HeavyDamage.cs" />
     <Compile Include="Classes\Attacks\NormalDamage.cs" />
+    <Compile Include="Classes\MainController.cs" />
     <Compile Include="Classes\Mannequin.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Story\StoryController.cs" />
