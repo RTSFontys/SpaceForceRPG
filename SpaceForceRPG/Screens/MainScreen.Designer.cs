@@ -41,7 +41,7 @@
             this.optionsBtn.TabIndex = 0;
             this.optionsBtn.Text = "Options";
             this.optionsBtn.UseVisualStyleBackColor = true;
-            this.optionsBtn.Click += new System.EventHandler(this.button1_Click);
+            this.optionsBtn.Click += new System.EventHandler(this.OptionsBtn);
             // 
             // play_btn
             // 
@@ -61,6 +61,7 @@
             this.Exit_btn.TabIndex = 1;
             this.Exit_btn.Text = "Exit";
             this.Exit_btn.UseVisualStyleBackColor = true;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // MainScreen
             // 

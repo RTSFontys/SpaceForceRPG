@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace SpaceForceRPG.Screens
 {
-    public partial class BattleScreen : Form
+    public partial class OptionsScreen : Form
     {
-        public BattleScreen()
+        public OptionsScreen()
         {
             InitializeComponent();
         }
-
-      
     }
 }

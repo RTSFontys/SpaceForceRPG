@@ -49,7 +49,6 @@
             this.Attack1Btn.TabIndex = 0;
             this.Attack1Btn.Text = "Attack1";
             this.Attack1Btn.UseVisualStyleBackColor = true;
-            this.Attack1Btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // Attack2Btn
             // 
@@ -89,7 +88,7 @@
             // 
             // playerPic_pb
             // 
-            this.playerPic_pb.Location = new System.Drawing.Point(118, 160);
+            this.playerPic_pb.Location = new System.Drawing.Point(159, 174);
             this.playerPic_pb.Name = "playerPic_pb";
             this.playerPic_pb.Size = new System.Drawing.Size(100, 50);
             this.playerPic_pb.TabIndex = 7;
@@ -97,7 +96,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(557, 160);
+            this.pictureBox1.Location = new System.Drawing.Point(540, 174);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 8;

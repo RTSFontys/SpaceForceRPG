@@ -13,8 +13,7 @@ namespace SpaceForceRPG.Screens
 {
     partial class DialogueScreen : Form
     {
-        public Player player { get; set; }
-        RichTextBox story;
+        public Player player;
         public DialogueScreen()
         {
             InitializeComponent();
@@ -29,5 +28,9 @@ namespace SpaceForceRPG.Screens
             richTextBox1.Text += text;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
