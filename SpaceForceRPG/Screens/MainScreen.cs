@@ -22,17 +22,14 @@ namespace SpaceForceRPG
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogueScreen form1 = new DialogueScreen();
-            form1.player = player;
-            form1.Show();
             this.Hide();
+            DialogueScreen form1 = new DialogueScreen(player);
+            form1.Show();
+            
         }
         private void OptionsBtn(object sender, EventArgs e)
         {
-            DialogueScreen form1 = new DialogueScreen();
-            form1.player = player;
-            form1.Show();
-            this.Hide();
+            
         }
 
         private void Exit_btn_Click(object sender, EventArgs e)

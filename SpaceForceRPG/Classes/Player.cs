@@ -41,9 +41,5 @@ namespace SpaceForceRPG.Classes
             SetHealth(GetMaxHealth());
             SetMana(GetMaxMana());
         }
-        public static class MyStaticClass
-        {
-            public static string MyStringMessage { get; set; }
-        }
     }
 }

@@ -121,6 +121,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.healthbar);
             this.Name = "DialogueScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();

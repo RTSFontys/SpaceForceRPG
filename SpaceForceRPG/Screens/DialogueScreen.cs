@@ -14,7 +14,7 @@ namespace SpaceForceRPG.Screens
     partial class DialogueScreen : Form
     {
         public Player player;
-        public DialogueScreen()
+        public DialogueScreen(Player player)
         {
             InitializeComponent();
             healthbar.Value = player.GetHealth();
