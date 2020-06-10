@@ -12,7 +12,7 @@ namespace SpaceForceRPG.Classes
         private string playerName;
         private int protection;
 
-        public Player(string playerName) : base(100, 1, 1, 30, true)
+        public Player(string playerName) : base(100, 1, 1, 100, true)
         {
             this.playerName = playerName;
             this.protection = 0;

@@ -51,7 +51,7 @@
             this.play_btn.TabIndex = 0;
             this.play_btn.Text = "Play game";
             this.play_btn.UseVisualStyleBackColor = true;
-            this.play_btn.Click += new System.EventHandler(this.button1_Click);
+            this.play_btn.Click += new System.EventHandler(this.PlayBtn);
             // 
             // Exit_btn
             // 

@@ -20,7 +20,7 @@ namespace SpaceForceRPG
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PlayBtn(object sender, EventArgs e)
         {
             this.Hide();
             DialogueScreen form1 = new DialogueScreen(player);

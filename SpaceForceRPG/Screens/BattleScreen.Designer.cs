@@ -34,39 +34,42 @@
             this.playerHp_lbl = new System.Windows.Forms.Label();
             this.enemyHP_lbl = new System.Windows.Forms.Label();
             this.playerPic_pb = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.enemyPic_pb = new System.Windows.Forms.PictureBox();
+            this.playerHP_bar = new System.Windows.Forms.ProgressBar();
+            this.enemyPH_Bar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.playerPic_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemyPic_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // Attack1Btn
             // 
-            this.Attack1Btn.Location = new System.Drawing.Point(118, 362);
+            this.Attack1Btn.Location = new System.Drawing.Point(81, 362);
             this.Attack1Btn.Name = "Attack1Btn";
-            this.Attack1Btn.Size = new System.Drawing.Size(75, 23);
+            this.Attack1Btn.Size = new System.Drawing.Size(112, 23);
             this.Attack1Btn.TabIndex = 0;
             this.Attack1Btn.Text = "Attack1";
             this.Attack1Btn.UseVisualStyleBackColor = true;
+            this.Attack1Btn.Click += new System.EventHandler(this.Attack1Btn_Click);
             // 
             // Attack2Btn
             // 
             this.Attack2Btn.Location = new System.Drawing.Point(199, 362);
             this.Attack2Btn.Name = "Attack2Btn";
-            this.Attack2Btn.Size = new System.Drawing.Size(75, 23);
+            this.Attack2Btn.Size = new System.Drawing.Size(112, 23);
             this.Attack2Btn.TabIndex = 1;
             this.Attack2Btn.Text = "HeavyAttack1";
             this.Attack2Btn.UseVisualStyleBackColor = true;
+            this.Attack2Btn.Click += new System.EventHandler(this.Attack2Btn_Click);
             // 
             // HealBtn
             // 
-            this.HealBtn.Location = new System.Drawing.Point(159, 391);
+            this.HealBtn.Location = new System.Drawing.Point(147, 391);
             this.HealBtn.Name = "HealBtn";
-            this.HealBtn.Size = new System.Drawing.Size(75, 23);
+            this.HealBtn.Size = new System.Drawing.Size(112, 23);
             this.HealBtn.TabIndex = 2;
             this.HealBtn.Text = "Heal1";
             this.HealBtn.UseVisualStyleBackColor = true;
+            this.HealBtn.Click += new System.EventHandler(this.HealBtn_Click);
             // 
             // playerHp_lbl
             // 
@@ -88,33 +91,35 @@
             // 
             // playerPic_pb
             // 
-            this.playerPic_pb.Location = new System.Drawing.Point(159, 174);
+            this.playerPic_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playerPic_pb.Location = new System.Drawing.Point(81, 96);
             this.playerPic_pb.Name = "playerPic_pb";
-            this.playerPic_pb.Size = new System.Drawing.Size(100, 50);
+            this.playerPic_pb.Size = new System.Drawing.Size(156, 200);
             this.playerPic_pb.TabIndex = 7;
             this.playerPic_pb.TabStop = false;
             // 
-            // pictureBox1
+            // enemyPic_pb
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(540, 174);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.enemyPic_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.enemyPic_pb.Location = new System.Drawing.Point(523, 96);
+            this.enemyPic_pb.Name = "enemyPic_pb";
+            this.enemyPic_pb.Size = new System.Drawing.Size(156, 200);
+            this.enemyPic_pb.TabIndex = 8;
+            this.enemyPic_pb.TabStop = false;
             // 
-            // progressBar1
+            // playerHP_bar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 29);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 9;
+            this.playerHP_bar.Location = new System.Drawing.Point(12, 29);
+            this.playerHP_bar.Name = "playerHP_bar";
+            this.playerHP_bar.Size = new System.Drawing.Size(100, 23);
+            this.playerHP_bar.TabIndex = 9;
             // 
-            // progressBar2
+            // enemyPH_Bar
             // 
-            this.progressBar2.Location = new System.Drawing.Point(688, 29);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(100, 23);
-            this.progressBar2.TabIndex = 10;
+            this.enemyPH_Bar.Location = new System.Drawing.Point(688, 29);
+            this.enemyPH_Bar.Name = "enemyPH_Bar";
+            this.enemyPH_Bar.Size = new System.Drawing.Size(100, 23);
+            this.enemyPH_Bar.TabIndex = 10;
             // 
             // BattleScreen
             // 
@@ -122,9 +127,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.enemyPH_Bar);
+            this.Controls.Add(this.playerHP_bar);
+            this.Controls.Add(this.enemyPic_pb);
             this.Controls.Add(this.playerPic_pb);
             this.Controls.Add(this.enemyHP_lbl);
             this.Controls.Add(this.playerHp_lbl);
@@ -134,7 +139,7 @@
             this.Name = "BattleScreen";
             this.Text = "BattleScreen";
             ((System.ComponentModel.ISupportInitialize)(this.playerPic_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemyPic_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,8 +153,8 @@
         private System.Windows.Forms.Label playerHp_lbl;
         private System.Windows.Forms.Label enemyHP_lbl;
         private System.Windows.Forms.PictureBox playerPic_pb;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.PictureBox enemyPic_pb;
+        private System.Windows.Forms.ProgressBar playerHP_bar;
+        private System.Windows.Forms.ProgressBar enemyPH_Bar;
     }
 }

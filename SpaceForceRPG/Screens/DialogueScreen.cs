@@ -1,4 +1,5 @@
 ﻿using SpaceForceRPG.Classes;
+using SpaceForceRPG.Classes.Story;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,12 @@ namespace SpaceForceRPG.Screens
         public Player player;
         public DialogueScreen(Player player)
         {
+            this.player = player;
             InitializeComponent();
             healthbar.Value = player.GetHealth();
+            manaBar.Value = player.GetMana();
+
+            StoryController();
             writeToTextBox("pepehands");
             writeToTextBox("Oh no we crashed! This is a a a a a a a a a a a a a a a a a  a a a  a a a  a aa  a aa a   very long string");
         }
@@ -31,6 +36,13 @@ namespace SpaceForceRPG.Screens
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BattleScreen form1 = new BattleScreen(player,2);
+            form1.Show();
         }
     }
 }
