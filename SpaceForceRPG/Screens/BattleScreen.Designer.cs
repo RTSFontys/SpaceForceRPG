@@ -104,6 +104,7 @@
             // 
             this.AttackBtn3.BackgroundImage = global::SpaceForceRPG.Properties.Resources.rangeButton;
             this.AttackBtn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AttackBtn3.Image = global::SpaceForceRPG.Properties.Resources.rangeButton;
             this.AttackBtn3.Location = new System.Drawing.Point(310, 12);
             this.AttackBtn3.Name = "AttackBtn3";
             this.AttackBtn3.Size = new System.Drawing.Size(177, 57);
@@ -115,6 +116,7 @@
             // 
             this.Attack2Btn.BackgroundImage = global::SpaceForceRPG.Properties.Resources.fireButton;
             this.Attack2Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Attack2Btn.Image = global::SpaceForceRPG.Properties.Resources.fireButton;
             this.Attack2Btn.Location = new System.Drawing.Point(406, 75);
             this.Attack2Btn.Name = "Attack2Btn";
             this.Attack2Btn.Size = new System.Drawing.Size(177, 57);
@@ -126,6 +128,7 @@
             // 
             this.Attack1Btn.BackgroundImage = global::SpaceForceRPG.Properties.Resources.meleeButton;
             this.Attack1Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Attack1Btn.Image = global::SpaceForceRPG.Properties.Resources.meleeButton;
             this.Attack1Btn.Location = new System.Drawing.Point(223, 75);
             this.Attack1Btn.Name = "Attack1Btn";
             this.Attack1Btn.Size = new System.Drawing.Size(177, 57);

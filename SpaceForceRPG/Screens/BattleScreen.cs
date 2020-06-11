@@ -32,7 +32,7 @@ namespace SpaceForceRPG.Screens
         {
             this.player = player;
             InitializeComponent();
-            int gender = this.player.GetGender();
+            int gender = player.GetGender();
             if(gender == 1)
             {
                 playerPic_pb.Image = Resources.player_male;
@@ -258,6 +258,8 @@ namespace SpaceForceRPG.Screens
             Attack1Btn.Enabled = false;
             Attack2Btn.Enabled = false;
             AttackBtn3.Enabled = false;
+
+            
 
 
         }

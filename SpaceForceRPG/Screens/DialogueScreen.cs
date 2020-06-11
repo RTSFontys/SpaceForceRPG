@@ -27,7 +27,7 @@ namespace SpaceForceRPG.Screens
             timer.Tick += new EventHandler(on_timer_event);
             timer.Interval = 100;
             timer.Enabled = true;
-
+            this.player = player;
             healthbar.Value = player.GetHealth();
         }
 
@@ -141,6 +141,13 @@ namespace SpaceForceRPG.Screens
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            BattleScreen form1 = new BattleScreen(player, 2);
+            form1.Show();
+            this.Hide();
         }
     }
 }
