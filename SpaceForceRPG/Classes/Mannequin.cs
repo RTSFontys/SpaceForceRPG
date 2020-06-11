@@ -41,51 +41,6 @@ namespace SpaceForceRPG.Classes
             this.attack2 = new Attacks.HeavyDamage();
             this.attack3 = new Attacks.Heal();
         }
-
-        public int Attacks(int attackNumber, Mannequin user)
-        {
-            int dmg = 0;
-            switch (attackNumber)
-            {
-                case 1:
-                    return attack1.UseAttack(user);
-                case 2:
-                    dmg = attack2.UseAttack(user);
-                    dmg = NewAttack(dmg, user);
-                    return dmg;
-                case 3:
-                    dmg = attack3.UseAttack(user);
-                    dmg = NewAttack(dmg, user);
-                    return dmg;
-                default:
-                    return NewAttack(-2, user);
-
-            }
-        }
-
-        public int NewAttack(int dmg, Mannequin user)
-        {
-            if (dmg == -1)
-            {
-                if (user.isPlayer)
-                    Console.WriteLine("Not enough mana!");
-                int attack;
-                string choice = Console.ReadLine();
-                Int32.TryParse(choice, out attack);
-                return Attacks(attack, user);
-            }
-            else if (dmg == -2)
-            {
-                if (user.isPlayer)
-                    Console.WriteLine("Invalid choice!");
-                int attack;
-                string choice = Console.ReadLine();
-                Int32.TryParse(choice, out attack);
-                return Attacks(attack, user);
-            }
-            return dmg;
-        }
-
         public void Damage(int dmg)
         {
             this.health -= dmg;

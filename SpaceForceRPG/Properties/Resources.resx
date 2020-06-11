@@ -118,43 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alien_with_fireweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alien_with_fireweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alien_with_meleeweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alien_with_meleeweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alien_with_throwingweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alien_with_throwingweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cyborg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cyborg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cyborg_with_fireweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cyborg_with_fireweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cyborg_with_meleeweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cyborg_with_meleeweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cyborg_with_throwingweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cyborg_with_throwingweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="player_male" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\player_male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="player_male_with_fireweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\player_male_with_fireweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="player_male_with_meleeweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\player_male_with_meleeweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="player_male_damaged" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_male_damaged.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="player_male_with_throwingweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player_male_with_throwingweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="player_female_with_throwingweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female_with_throwingweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alien_with_meleeweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alien_with_meleeweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_male_melee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_male_melee.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cyborg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cyborg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cyborg_with_meleeweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cyborg_with_meleeweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alien_with_throwingweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alien_with_throwingweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_female_with_meleeweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female_with_meleeweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_female_with_fireweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female_with_fireweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cyborg_with_throwingweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cyborg_with_throwingweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_male_with_meleeweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_male_with_meleeweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_male_throwing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_male_throwing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_male_shooting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_male_shooting.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_male_with_fireweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_male_with_fireweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_male" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_male.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alien_with_fireweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alien_with_fireweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_female_shooting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female_shooting.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_female_throwing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female_throwing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_female" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_female_damaged" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female_damaged.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_female_melee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_female_melee.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="russian" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\russian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\russian.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="russian_damaged" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\russian_damaged.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="russian_melee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\russian_melee.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="russian_shooting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\russian_shooting.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="russian_throwing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\russian_throwing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

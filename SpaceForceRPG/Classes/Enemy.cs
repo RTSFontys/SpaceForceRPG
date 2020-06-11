@@ -15,52 +15,9 @@ namespace SpaceForceRPG.Classes
             rnd = new Random();
         }
 
-        public int GetAttack()
+        public int GetDamage()
         {
-
-            if (GetHealth() > 20)
-                attackNumber = rnd.Next(1, 3);
-            else
-                attackNumber = rnd.Next(1, 4);
-
-            int dmg = 0;
-            switch (attackNumber)
-            {
-                case 1:
-                    return attack1.UseAttack(this);
-                case 2:
-                    dmg = attack2.UseAttack(this);
-                    dmg = CheckIfAttackIsValid(dmg);
-                    return dmg;
-                case 3:
-                    dmg = attack3.UseAttack(this);
-                    dmg = CheckIfAttackIsValid(dmg);
-                    return dmg;
-                default:
-                    return CheckIfAttackIsValid(-2);
-
-            }
-        }
-        public int CheckIfAttackIsValid(int dmg)
-        {
-            int attackNumber;
-            if (dmg == -1)
-            {
-                if (GetHealth() > 20)
-                    attackNumber = rnd.Next(1, 3);
-                else
-                    attackNumber = rnd.Next(1, 4);
-                return GetAttack();
-            }
-            else if (dmg == -2)
-            {
-                if (GetHealth() > 20)
-                    attackNumber = rnd.Next(1, 3);
-                else
-                    attackNumber = rnd.Next(1, 4);
-                return GetAttack();
-            }
-            return dmg;
+            return attackNumber = rnd.Next(1,3);
         }
     }
 }

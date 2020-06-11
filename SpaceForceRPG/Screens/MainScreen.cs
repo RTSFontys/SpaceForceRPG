@@ -14,7 +14,7 @@ namespace SpaceForceRPG
 {
     partial class MainScreen : Form
     {
-        Player player = new Player("test");
+        Player player = new Player("test",1);
         public MainScreen()
         {
             InitializeComponent();

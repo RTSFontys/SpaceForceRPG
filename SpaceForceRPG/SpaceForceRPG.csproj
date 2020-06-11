@@ -164,5 +164,62 @@
   <ItemGroup>
     <None Include="Resources\russian.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female_with_fireweapon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female_with_meleeweapon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female_with_throwingweapon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_male.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_male_damaged.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_male_melee.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_male_shooting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_male_throwing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female_shooting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female_throwing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female_damaged.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_female_melee.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russian.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russian_damaged.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russian_melee.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russian_shooting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russian_throwing.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
