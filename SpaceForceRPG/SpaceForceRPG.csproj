@@ -255,5 +255,32 @@
   <ItemGroup>
     <None Include="Resources\rangeButton.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dialogue Screen\restButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dialogue Screen\DialogueScreenVoorbeeld.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dialogue Screen\DialogueScreenAchtergrond.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dialogue Screen\greenButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dialogue Screen\redButton.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,6 +17,7 @@ namespace SpaceForceRPG.Screens
     {
         public Player player;
         DateTime currentTime = DateTime.Now;
+        int clickCounter = 0;
 
         public DialogueScreen(Player player)
         {
@@ -99,22 +100,35 @@ namespace SpaceForceRPG.Screens
 
         private void button1_Click(object sender, EventArgs e)
         {
-            clearTextBox();
-            timer1.Stop();
-            txt1 = "As you look for additional gear around the crashsite, you notice in the corner of your eye, " +
-            "movement. ";
-            len1 = txt1.Length;
-            timer2.Start();
-            int counterFinal = txt1.Length;
-            if (counter1 == txt1.Length)
+ 
+            clickCounter++;
+
+            if(clickCounter == 1)
             {
+                clearTextBox();
                 timer1.Stop();
+                txt1 = "As you look for additional gear around the crashsite, you notice in the corner of your eye, " +
+                "movement. ";
+                len1 = txt1.Length;
+                timer2.Start();
+                int counterFinal = txt1.Length;
+                if (counter1 == txt1.Length)
+                {
+                    timer1.Stop();
 
+                }
+                else
+                {
+
+                }
             }
-            else
+            else if(clickCounter == 2)
             {
-
+                BattleScreen form1 = new BattleScreen(player, 1);
+                form1.Show();
+                this.Hide();
             }
+
 
         }
 
