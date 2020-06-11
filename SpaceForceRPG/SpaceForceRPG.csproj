@@ -150,6 +150,7 @@
     <None Include="Resources\cyborg_with_throwingweapon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Pixeled.ttf" />
     <None Include="Resources\player_male.png" />
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +221,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\russian_throwing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainMenuAchtergrond.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\optionsButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BattleScreenAchtergrond.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meleeButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rangeButton.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

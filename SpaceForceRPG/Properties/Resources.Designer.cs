@@ -103,6 +103,16 @@ namespace SpaceForceRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BattleScreenAchtergrond {
+            get {
+                object obj = ResourceManager.GetObject("BattleScreenAchtergrond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cyborg {
             get {
                 object obj = ResourceManager.GetObject("cyborg", resourceCulture);
@@ -137,6 +147,66 @@ namespace SpaceForceRPG.Properties {
             get {
                 object obj = ResourceManager.GetObject("cyborg_with_throwingweapon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exitButton {
+            get {
+                object obj = ResourceManager.GetObject("exitButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fireButton {
+            get {
+                object obj = ResourceManager.GetObject("fireButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainMenuAchtergrond {
+            get {
+                object obj = ResourceManager.GetObject("MainMenuAchtergrond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meleeButton {
+            get {
+                object obj = ResourceManager.GetObject("meleeButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap optionsButton {
+            get {
+                object obj = ResourceManager.GetObject("optionsButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Pixeled {
+            get {
+                object obj = ResourceManager.GetObject("Pixeled", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -303,6 +373,16 @@ namespace SpaceForceRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rangeButton {
+            get {
+                object obj = ResourceManager.GetObject("rangeButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap russian {
             get {
                 object obj = ResourceManager.GetObject("russian", resourceCulture);
@@ -346,6 +426,16 @@ namespace SpaceForceRPG.Properties {
         internal static System.Drawing.Bitmap russian_throwing {
             get {
                 object obj = ResourceManager.GetObject("russian_throwing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startButton {
+            get {
+                object obj = ResourceManager.GetObject("startButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

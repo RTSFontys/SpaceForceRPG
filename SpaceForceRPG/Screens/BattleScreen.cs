@@ -26,6 +26,7 @@ namespace SpaceForceRPG.Screens
         Image enemyTakingDamage;
         Image playerShooting;
         Image playerThrowing;
+        Image playerMelee;
         Image playerTakingDamage;
         public BattleScreen(Player player, int type)
         {
@@ -35,11 +36,17 @@ namespace SpaceForceRPG.Screens
             if(gender == 1)
             {
                 playerPic_pb.Image = Resources.player_male;
+                playerShooting = Resources.player_male_shooting;
+                playerMelee = Resources.player_male_melee;
+                playerThrowing = Resources.player_male_throwing;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
             {
                 playerPic_pb.Image = Resources.player_female;
+                playerShooting = Resources.player_female_shooting;
+                playerMelee = Resources.player_female_melee;
+                playerThrowing = Resources.player_female_throwing;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             if (type == 1)
@@ -61,7 +68,7 @@ namespace SpaceForceRPG.Screens
 
 
         }
-        public void GenerateCyborg(Player player)
+        private void GenerateCyborg(Player player)
         {
             enemyPic_pb.Image = Resources.cyborg;
             enemyShooting = Resources.cyborg_with_fireweapon;
@@ -80,6 +87,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 cyborg = new Enemy(health, level, mana);
+                enemyPH_Bar.Value = cyborg.GetHealth();
             }
             else
             {
@@ -98,10 +106,11 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 cyborg = new Enemy(health, enemyLevel, mana);
+                enemyPH_Bar.Value = cyborg.GetHealth();
             }
         }
 
-        public void GenerateRussian(Player player)
+        private void GenerateRussian(Player player)
         {
             enemyPic_pb.Image = Resources.russian;
             enemyShooting = Resources.russian_shooting;
@@ -120,6 +129,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 russian = new Enemy(health, level, mana);
+                enemyPH_Bar.Value = russian.GetHealth();
             }
             else
             {
@@ -138,10 +148,11 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 russian = new Enemy(health, enemyLevel, mana);
+                enemyPH_Bar.Value = russian.GetHealth();
             }
         }
 
-        public void GenerateAlien(Player player)
+        private void GenerateAlien(Player player)
         {
             enemyPic_pb.Image = Resources.alien;
             enemyPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -157,6 +168,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 alien = new Enemy(health, level, mana);
+                enemyPH_Bar.Value = alien.GetHealth();
             }
             else
             {
@@ -175,6 +187,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 alien = new Enemy(health, enemyLevel, mana);
+                enemyPH_Bar.Value = alien.GetHealth();
             }
         }
         
@@ -191,9 +204,10 @@ namespace SpaceForceRPG.Screens
             {
                 currentEnemy.SetHealth(curEnemyHP);
                 enemyPH_Bar.Value = curEnemyHP;
-                playerPic_pb.Image = Resources.player_male;
+                playerPic_pb.Image = playerMelee;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
-
+                enemyPic_pb.Image = enemyTakingDamage;
+                EnemyTurn();
             }
         }
 
@@ -210,9 +224,10 @@ namespace SpaceForceRPG.Screens
             {
                 currentEnemy.SetHealth(curEnemyHP);
                 enemyPH_Bar.Value = curEnemyHP;
-                playerPic_pb.Image = Resources.player_male_shooting;
+                playerPic_pb.Image = playerShooting;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
-
+                enemyPic_pb.Image = enemyTakingDamage;
+                EnemyTurn();
             }
 
 
@@ -231,10 +246,20 @@ namespace SpaceForceRPG.Screens
             {
                 currentEnemy.SetHealth(curEnemyHP);
                 enemyPH_Bar.Value = curEnemyHP;
-                playerPic_pb.Image = Resources.player_male_throwing;
+                playerPic_pb.Image = playerThrowing;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
-
+                enemyPic_pb.Image = enemyTakingDamage;
+                EnemyTurn();
             }
+        }
+        
+        private void EnemyTurn()
+        {
+            Attack1Btn.Enabled = false;
+            Attack2Btn.Enabled = false;
+            AttackBtn3.Enabled = false;
+
+
         }
     }
 }

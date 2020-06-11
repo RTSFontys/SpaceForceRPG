@@ -17,6 +17,7 @@ namespace SpaceForceRPG.Classes
         {
             this.playerName = playerName;
             this.protection = 0;
+            this.gender = gender;
         }
         public void LevelUp()
         {
