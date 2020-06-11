@@ -14,13 +14,13 @@ namespace SpaceForceRPG
 {
     partial class MainScreen : Form
     {
-        Player player = new Player("test");
+        Player player = new Player("test",1);
         public MainScreen()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PlayBtn(object sender, EventArgs e)
         {
             this.Hide();
             DialogueScreen form1 = new DialogueScreen(player);

@@ -11,11 +11,13 @@ namespace SpaceForceRPG.Classes
         Random rnd1 = new Random();
         private string playerName;
         private int protection;
+        private int gender;
 
-        public Player(string playerName) : base(100, 1, 1, 30, true)
+        public Player(string playerName, int gender) : base(100, 1, 1, 100, true)
         {
             this.playerName = playerName;
             this.protection = 0;
+            this.gender = gender;
         }
         public void LevelUp()
         {
@@ -35,6 +37,10 @@ namespace SpaceForceRPG.Classes
         public void GainExp(int gain)
         {
             SetExp(GetExp() + gain);
+        }
+        public int GetGender()
+        {
+            return this.gender;
         }
         public void Regen()
         {
