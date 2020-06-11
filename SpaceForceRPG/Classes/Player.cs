@@ -27,8 +27,6 @@ namespace SpaceForceRPG.Classes
                 SetLevel(GetLevel() + 1);
                 SetBaseDamage(GetBaseDamage() + 0.3f);
                 SetHealPower(GetHealPower() + 5);
-                SetMaxMana(GetMaxMana() + 5);
-                SetMana(GetMaxMana());
                 SetMaxHealth(GetMaxHealth() + 10);
                 SetHealth(GetMaxHealth());
             }
@@ -45,7 +43,6 @@ namespace SpaceForceRPG.Classes
         public void Regen()
         {
             SetHealth(GetMaxHealth());
-            SetMana(GetMaxMana());
         }
     }
 }

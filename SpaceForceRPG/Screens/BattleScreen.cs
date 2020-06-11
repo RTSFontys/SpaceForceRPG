@@ -68,6 +68,7 @@ namespace SpaceForceRPG.Screens
 
 
         }
+        
         private void GenerateCyborg(Player player)
         {
             enemyPic_pb.Image = Resources.cyborg;
@@ -87,6 +88,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 cyborg = new Enemy(health, level, mana);
+                enemyPH_Bar.Value = cyborg.GetMaxHealth();
                 enemyPH_Bar.Value = cyborg.GetHealth();
             }
             else
@@ -106,6 +108,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 cyborg = new Enemy(health, enemyLevel, mana);
+                enemyPH_Bar.Value = cyborg.GetMaxHealth();
                 enemyPH_Bar.Value = cyborg.GetHealth();
             }
         }
@@ -129,6 +132,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 russian = new Enemy(health, level, mana);
+                enemyPH_Bar.Maximum = russian.GetHealth();
                 enemyPH_Bar.Value = russian.GetHealth();
             }
             else
@@ -148,6 +152,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 russian = new Enemy(health, enemyLevel, mana);
+                enemyPH_Bar.Maximum = russian.GetHealth();
                 enemyPH_Bar.Value = russian.GetHealth();
             }
         }
@@ -168,6 +173,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 alien = new Enemy(health, level, mana);
+                enemyPH_Bar.Value = alien.GetMaxHealth();
                 enemyPH_Bar.Value = alien.GetHealth();
             }
             else
@@ -187,6 +193,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 alien = new Enemy(health, enemyLevel, mana);
+                enemyPH_Bar.Value = alien.GetMaxHealth();
                 enemyPH_Bar.Value = alien.GetHealth();
             }
         }
@@ -258,6 +265,8 @@ namespace SpaceForceRPG.Screens
             Attack1Btn.Enabled = false;
             Attack2Btn.Enabled = false;
             AttackBtn3.Enabled = false;
+
+            
 
             
 

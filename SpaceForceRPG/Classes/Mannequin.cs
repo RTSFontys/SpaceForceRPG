@@ -15,9 +15,11 @@ namespace SpaceForceRPG.Classes
         Random rnd = new Random();
         private float baseDamage;
         private int healPower;
-        private int mana;
+        private int ammo;
+        private int grenades;
+        private int maxGrenades;
         private int gold;
-        private int maxMana;
+        private int maxAmmo;
         private bool isPlayer;
         protected Attacks.AttackController attack1;
         protected Attacks.AttackController attack2;
@@ -25,17 +27,19 @@ namespace SpaceForceRPG.Classes
         public string[] inventory = new string[8];
 
 
-        protected Mannequin(int health, int level, float baseDamage, int mana, bool isPlayer, int exp = 0, int gold = 0)
+        protected Mannequin(int health, int level, float baseDamage, int ammo, bool isPlayer, int exp = 0, int gold = 0, int grenades = 3)
         {
             this.health = health;
             this.level = level;
             this.baseDamage = baseDamage;
             this.healPower = 30;
-            this.mana = mana;
+            this.ammo = ammo;
+            this.grenades = grenades;
+            this.maxGrenades = grenades;
             this.exp = exp;
             this.isPlayer = isPlayer;
             this.maxHealth = this.health;
-            this.maxMana = this.mana;
+            this.maxAmmo = this.ammo;
             this.gold = this.gold;
             this.attack1 = new Attacks.NormalDamage();
             this.attack2 = new Attacks.HeavyDamage();
@@ -101,24 +105,39 @@ namespace SpaceForceRPG.Classes
             this.maxHealth = maxHealth;
         }
 
-        public int GetMana()
+        public int GetAmmo()
         {
-            return this.mana;
+            return this.ammo;
         }
 
-        public void SetMana(int mana)
+        public void SetAmmo(int ammo)
         {
-            this.mana = mana;
+            this.ammo = ammo;
         }
 
-        public int GetMaxMana()
+        public int GetMaxAmmo()
         {
-            return this.maxMana;
+            return this.maxAmmo;
         }
 
-        protected void SetMaxMana(int maxMana)
+        protected void SetMaxAmmo(int maxAmmo)
         {
-            this.maxMana = maxMana;
+            this.maxAmmo = maxAmmo;
+        }
+
+        public int GetGrenades()
+        {
+            return this.grenades;
+        }
+
+        public void SetGrenades(int grenades)
+        {
+            this.grenades = grenades;
+        }
+
+        public int GetMaxGrenades()
+        {
+            return this.maxGrenades;
         }
 
         public bool GetIsPlayer()

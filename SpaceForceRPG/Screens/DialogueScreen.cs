@@ -70,6 +70,7 @@ namespace SpaceForceRPG.Screens
             if (counter == txt.Length)
             {
                 timer1.Stop();
+
             }
             else
             {
@@ -145,7 +146,7 @@ namespace SpaceForceRPG.Screens
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            BattleScreen form1 = new BattleScreen(player, 2);
+            BattleScreen form1 = new BattleScreen(player, 3);
             form1.Show();
             this.Hide();
         }
