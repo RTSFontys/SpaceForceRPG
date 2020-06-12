@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BattleScreen));
             this.playerHp_lbl = new System.Windows.Forms.Label();
             this.enemyHP_lbl = new System.Windows.Forms.Label();
             this.playerHP_bar = new System.Windows.Forms.ProgressBar();
@@ -81,7 +80,6 @@
             // enemyPic_pb
             // 
             this.enemyPic_pb.BackColor = System.Drawing.Color.Transparent;
-            this.enemyPic_pb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemyPic_pb.BackgroundImage")));
             this.enemyPic_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enemyPic_pb.Location = new System.Drawing.Point(420, 188);
             this.enemyPic_pb.Name = "enemyPic_pb";
@@ -92,7 +90,6 @@
             // playerPic_pb
             // 
             this.playerPic_pb.BackColor = System.Drawing.Color.Transparent;
-            this.playerPic_pb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playerPic_pb.BackgroundImage")));
             this.playerPic_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.playerPic_pb.Location = new System.Drawing.Point(3, 188);
             this.playerPic_pb.Name = "playerPic_pb";
