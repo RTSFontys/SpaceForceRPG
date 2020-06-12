@@ -103,6 +103,56 @@ namespace SpaceForceRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alien_damaged {
+            get {
+                object obj = ResourceManager.GetObject("alien_damaged", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_death {
+            get {
+                object obj = ResourceManager.GetObject("alien_death", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_melee {
+            get {
+                object obj = ResourceManager.GetObject("alien_melee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_shooting {
+            get {
+                object obj = ResourceManager.GetObject("alien_shooting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_throwing {
+            get {
+                object obj = ResourceManager.GetObject("alien_throwing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alien_with_fireweapon {
             get {
                 object obj = ResourceManager.GetObject("alien_with_fireweapon", resourceCulture);
@@ -133,6 +183,16 @@ namespace SpaceForceRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alien1 {
+            get {
+                object obj = ResourceManager.GetObject("alien1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BattleScreenAchtergrond {
             get {
                 object obj = ResourceManager.GetObject("BattleScreenAchtergrond", resourceCulture);
@@ -146,6 +206,56 @@ namespace SpaceForceRPG.Properties {
         internal static System.Drawing.Bitmap cyborg {
             get {
                 object obj = ResourceManager.GetObject("cyborg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cyborg_damaged {
+            get {
+                object obj = ResourceManager.GetObject("cyborg_damaged", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cyborg_death {
+            get {
+                object obj = ResourceManager.GetObject("cyborg_death", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cyborg_melee {
+            get {
+                object obj = ResourceManager.GetObject("cyborg_melee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cyborg_shooting {
+            get {
+                object obj = ResourceManager.GetObject("cyborg_shooting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cyborg_throwing {
+            get {
+                object obj = ResourceManager.GetObject("cyborg_throwing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +286,16 @@ namespace SpaceForceRPG.Properties {
         internal static System.Drawing.Bitmap cyborg_with_throwingweapon {
             get {
                 object obj = ResourceManager.GetObject("cyborg_with_throwingweapon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cyborg1 {
+            get {
+                object obj = ResourceManager.GetObject("cyborg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
