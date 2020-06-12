@@ -37,7 +37,6 @@ D:\Coding\SpaceForceGame\SpaceForceRPG\SpaceForceRPG\obj\Debug\SpaceForceRPG.pdb
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\bin\Debug\SpaceForceRPG.exe.config
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\bin\Debug\SpaceForceRPG.exe
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\bin\Debug\SpaceForceRPG.pdb
-D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.csprojAssemblyReference.cache
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.Screens.BattleScreen.resources
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.Screens.DialogueScreen.resources
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.MainScreen.resources
@@ -46,3 +45,4 @@ D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.csproj.CoreCompileInputs.cache
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.exe
 D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.pdb
+D:\Coding\Github\Verdiepend\SpaceForceRPG1\SpaceForceRPG\obj\Debug\SpaceForceRPG.csprojAssemblyReference.cache
