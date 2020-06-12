@@ -173,7 +173,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 alien = new Enemy(health, level, mana);
-                enemyPH_Bar.Value = alien.GetMaxHealth();
+                enemyPH_Bar.Maximum = alien.GetHealth();
                 enemyPH_Bar.Value = alien.GetHealth();
             }
             else
@@ -193,7 +193,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 alien = new Enemy(health, enemyLevel, mana);
-                enemyPH_Bar.Value = alien.GetMaxHealth();
+                enemyPH_Bar.Maximum = alien.GetHealth();
                 enemyPH_Bar.Value = alien.GetHealth();
             }
         }
