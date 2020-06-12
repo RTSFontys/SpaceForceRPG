@@ -282,5 +282,41 @@
   <ItemGroup>
     <None Include="Resources\Dialogue Screen\redButton.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyborg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyborg_damaged.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyborg_death.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyborg_melee.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyborg_shooting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cyborg_throwing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien_damaged.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien_death.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien_melee.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien_shooting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien_throwing.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

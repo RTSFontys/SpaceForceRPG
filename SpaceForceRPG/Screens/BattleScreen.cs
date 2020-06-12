@@ -39,6 +39,7 @@ namespace SpaceForceRPG.Screens
                 playerShooting = Resources.player_male_shooting;
                 playerMelee = Resources.player_male_melee;
                 playerThrowing = Resources.player_male_throwing;
+                playerTakingDamage = Resources.player_male_damaged;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
@@ -47,6 +48,7 @@ namespace SpaceForceRPG.Screens
                 playerShooting = Resources.player_female_shooting;
                 playerMelee = Resources.player_female_melee;
                 playerThrowing = Resources.player_female_throwing;
+                playerTakingDamage = Resources.player_female_damaged;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             if (type == 1)
@@ -71,10 +73,10 @@ namespace SpaceForceRPG.Screens
         
         private void GenerateCyborg(Player player)
         {
-            enemyPic_pb.Image = Resources.cyborg;
-            enemyShooting = Resources.cyborg_with_fireweapon;
-            enemyThrowing = Resources.cyborg_with_throwingweapon;
-            enemyMelee = Resources.cyborg_with_meleeweapon;
+            enemyPic_pb.Image = Resources.cyborg1;
+            enemyShooting = Resources.cyborg_shooting;
+            enemyThrowing = Resources.cyborg_throwing;
+            enemyMelee = Resources.cyborg_melee;
             enemyPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
             Random lvlEnemy = new Random();
             if (player.GetLevel() > 0 && player.GetLevel() < 5)
@@ -159,7 +161,11 @@ namespace SpaceForceRPG.Screens
 
         private void GenerateAlien(Player player)
         {
-            enemyPic_pb.Image = Resources.alien;
+            enemyPic_pb.Image = Resources.alien1;
+            enemyShooting = Resources.alien_shooting;
+            enemyThrowing = Resources.alien_throwing;
+            enemyMelee = Resources.alien_melee;
+            enemyTakingDamage = Resources.alien_damaged;
             enemyPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
             Random lvlEnemy = new Random();
             if (player.GetLevel() > 0 && player.GetLevel() < 5)
