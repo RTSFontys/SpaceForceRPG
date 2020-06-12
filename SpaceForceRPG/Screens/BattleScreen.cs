@@ -88,7 +88,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 cyborg = new Enemy(health, level, mana);
-                enemyPH_Bar.Value = cyborg.GetMaxHealth();
+                enemyPH_Bar.Maximum = cyborg.GetHealth();
                 enemyPH_Bar.Value = cyborg.GetHealth();
             }
             else
@@ -108,7 +108,7 @@ namespace SpaceForceRPG.Screens
                     health += 10;
                 }
                 cyborg = new Enemy(health, enemyLevel, mana);
-                enemyPH_Bar.Value = cyborg.GetMaxHealth();
+                enemyPH_Bar.Maximum = cyborg.GetHealth();
                 enemyPH_Bar.Value = cyborg.GetHealth();
             }
         }
@@ -265,10 +265,45 @@ namespace SpaceForceRPG.Screens
             Attack1Btn.Enabled = false;
             Attack2Btn.Enabled = false;
             AttackBtn3.Enabled = false;
+            int number = currentEnemy.GetDamage();
+            int playerHP = player.GetHealth();
+            if (number == 1)
+            {
+                playerHP -= 10;
+                player.SetHealth(playerHP);
+                playerHP_bar.Value = player.GetHealth();
+                playerPic_pb.Image = playerTakingDamage;
+                enemyPic_pb.Image = enemyMelee;
+                Attack1Btn.Enabled = true;
+                Attack2Btn.Enabled = true;
+                AttackBtn3.Enabled = true;
 
-            
+            }
+            else if (number == 2)
+            {
+                playerHP -= 20;
+                player.SetHealth(playerHP);
+                playerHP_bar.Value = player.GetHealth();
+                playerPic_pb.Image = playerTakingDamage;
+                enemyPic_pb.Image = enemyShooting;
+                Attack1Btn.Enabled = true;
+                Attack2Btn.Enabled = true;
+                AttackBtn3.Enabled = true;
+            }
+            else
+            {
+                playerHP -= 30;
+                player.SetHealth(playerHP);
+                playerHP_bar.Value = player.GetHealth();
+                playerPic_pb.Image = playerTakingDamage;
+                enemyPic_pb.Image = enemyThrowing;
+                Attack1Btn.Enabled = true;
+                Attack2Btn.Enabled = true;
+                AttackBtn3.Enabled = true;
+            }
 
-            
+
+
 
 
         }
