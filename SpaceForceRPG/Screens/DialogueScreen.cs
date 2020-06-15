@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Globalization;
+using SpaceForceRPG.Properties;
+using System.Drawing.Text;  
 
 namespace SpaceForceRPG.Screens
 {
@@ -62,6 +64,11 @@ namespace SpaceForceRPG.Screens
         string txt2;
         string txt3;
 
+        public void font()
+        {
+
+        }
+
         public void clearTextBox()
         {
             richTextBox1.Clear();
@@ -75,6 +82,13 @@ namespace SpaceForceRPG.Screens
         }
         private void DialogueScreen_Load(object sender, EventArgs e)
         {
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"C:\Users\whelb\Downloads\pixeled\Pixeled.ttf");
+            foreach (Control c in this.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], 5, FontStyle.Regular);
+            }
+
             len = txt.Length;
             timer1.Start();
             int counterFinal = txt.Length;
@@ -198,8 +212,7 @@ namespace SpaceForceRPG.Screens
             if (clickCounter == 0)
             {
                 timer1.Stop();
-                string textContinue = txt;
-                richTextBox1.Text = textContinue;
+                richTextBox1.Text = txt;
             }
             else if (clickCounter == 1)
             {
