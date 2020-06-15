@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,14 @@ namespace SpaceForceRPG.Classes
         private string playerName;
         private int protection;
         private int gender;
+        private int enemiesKilled;
 
         public Player(string playerName, int gender) : base(100, 1, 1, 100, true)
         {
             this.playerName = playerName;
             this.protection = 0;
             this.gender = gender;
+            enemiesKilled = 0;
         }
         public void LevelUp()
         {
@@ -43,6 +46,16 @@ namespace SpaceForceRPG.Classes
         public void Regen()
         {
             SetHealth(GetMaxHealth());
+        }
+
+        public void SetEnemiesKilled(int number)
+        {
+            this.enemiesKilled += number;
+        }
+
+        public int getEnemiesKilled()
+        {
+            return this.enemiesKilled;
         }
     }
 }
