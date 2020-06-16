@@ -93,13 +93,15 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
+            this.timer2.Enabled = true;
             this.timer2.Interval = 25;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // button1
             // 
@@ -130,6 +132,7 @@
             this.option3.Size = new System.Drawing.Size(244, 49);
             this.option3.TabIndex = 7;
             this.option3.UseVisualStyleBackColor = true;
+            this.option3.Click += new System.EventHandler(this.option3_Click);
             // 
             // option2
             // 
