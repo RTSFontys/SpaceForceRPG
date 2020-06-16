@@ -212,6 +212,10 @@ namespace SpaceForceRPG.Screens
             {
                 enemyPH_Bar.Value = 0;
                 MessageBox.Show("You defeated the enemy!");
+                player.SetEnemiesKilled(1);
+                DialogueScreen dialogueScreen = new DialogueScreen(player);
+                this.Hide();
+                dialogueScreen.Show();
             }
             else
             {
@@ -232,6 +236,10 @@ namespace SpaceForceRPG.Screens
             {
                 enemyPH_Bar.Value = 0;
                 MessageBox.Show("You defeated the enemy!");
+                player.SetEnemiesKilled(1);
+                DialogueScreen dialogueScreen = new DialogueScreen(player);
+                this.Hide();
+                dialogueScreen.Show();
             }
             else
             {
@@ -254,6 +262,10 @@ namespace SpaceForceRPG.Screens
             {
                 enemyPH_Bar.Value = 0;
                 MessageBox.Show("You defeated the enemy!");
+                player.SetEnemiesKilled(1);
+                DialogueScreen dialogueScreen = new DialogueScreen(player);
+                this.Hide();
+                dialogueScreen.Show();
             }
             else
             {
@@ -307,11 +319,6 @@ namespace SpaceForceRPG.Screens
                 Attack2Btn.Enabled = true;
                 AttackBtn3.Enabled = true;
             }
-
-
-
-
-
         }
 
         private void BattleScreen_Load(object sender, EventArgs e)
