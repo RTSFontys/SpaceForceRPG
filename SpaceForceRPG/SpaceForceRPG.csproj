@@ -318,5 +318,8 @@
   <ItemGroup>
     <None Include="Resources\alien_throwing.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Font.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

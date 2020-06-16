@@ -42,7 +42,6 @@
             this.option2 = new System.Windows.Forms.Button();
             this.option1 = new System.Windows.Forms.Button();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // healthbar
@@ -94,24 +93,25 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
+            this.timer2.Enabled = true;
             this.timer2.Interval = 25;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(665, 398);
+            this.button1.Location = new System.Drawing.Point(665, 203);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 38);
             this.button1.TabIndex = 9;
             this.button1.Text = "placeholder - battlescene";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // restButton
             // 
@@ -126,17 +126,18 @@
             // option3
             // 
             this.option3.Image = global::SpaceForceRPG.Properties.Resources.Action_3;
-            this.option3.Location = new System.Drawing.Point(665, 549);
+            this.option3.Location = new System.Drawing.Point(665, 354);
             this.option3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option3.Name = "option3";
             this.option3.Size = new System.Drawing.Size(244, 49);
             this.option3.TabIndex = 7;
             this.option3.UseVisualStyleBackColor = true;
+            this.option3.Click += new System.EventHandler(this.option3_Click);
             // 
             // option2
             // 
             this.option2.Image = global::SpaceForceRPG.Properties.Resources.Action_2;
-            this.option2.Location = new System.Drawing.Point(665, 495);
+            this.option2.Location = new System.Drawing.Point(665, 300);
             this.option2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option2.Name = "option2";
             this.option2.Size = new System.Drawing.Size(244, 49);
@@ -147,7 +148,7 @@
             // option1
             // 
             this.option1.Image = global::SpaceForceRPG.Properties.Resources.Action_1;
-            this.option1.Location = new System.Drawing.Point(665, 441);
+            this.option1.Location = new System.Drawing.Point(665, 246);
             this.option1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option1.Name = "option1";
             this.option1.Size = new System.Drawing.Size(244, 49);
@@ -157,7 +158,7 @@
             // 
             // timer3
             // 
-            this.timer3.Interval = 50;
+            this.timer3.Interval = 25;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // DialogueScreen
@@ -203,6 +204,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button restButton;
         private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Timer timer4;
     }
 }

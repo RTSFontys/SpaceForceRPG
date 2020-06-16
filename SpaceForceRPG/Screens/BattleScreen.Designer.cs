@@ -155,6 +155,7 @@
             this.Name = "BattleScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BattleScreen";
+            this.Load += new System.EventHandler(this.BattleScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.enemyPic_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPic_pb)).EndInit();
             this.ResumeLayout(false);
