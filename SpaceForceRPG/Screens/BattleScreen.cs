@@ -313,5 +313,10 @@ namespace SpaceForceRPG.Screens
 
 
         }
+
+        private void BattleScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

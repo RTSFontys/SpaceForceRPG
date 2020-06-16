@@ -11,6 +11,8 @@ namespace SpaceForceRPG.Screens
         int clickCounter = 0;               // controls skipping text
         int clickCounter2 = 0;              // controls actions in second phase
 
+        int button2Click;
+
         public DialogueScreen(Player player)
         {
             InitializeComponent();                      
@@ -30,11 +32,10 @@ namespace SpaceForceRPG.Screens
 
         int counter = 0;
         int counter1 = 0;
+        int counter2 = 0;
         int len;
         int len1;
-
-
-
+        int len2;
 
         string txt = "You have been sent along with other crew in a spaceship on an important mission to Jupiter. Everything is going well until you hear a loud bang. Your ship seemed to have been hit by a meteorite. Chaos erupts inside of the ship as all of the alarms go off and it starts plummeting down towards the planet." +
             "\n\nAs you climb out of the wreckage, you realise that you have crashed in an unknown location on Mars. You temporarily establish a connection with a nearby camp, but the signal swiftly gets cut off. Luckily, you were able to find out where the camp lies, but it is still hundreds of kilometers away from you. As you look around you quickly realize that all of the crew died except for you. There is gear lying around which you proceed to salvage and equip yourself with, but who knows if it is enough to deal with the unknown dangers out there on this planet." +
@@ -48,8 +49,9 @@ namespace SpaceForceRPG.Screens
                 "\n\nA figure walks towards you, wearing a suit. After noticing the Russian flag, you quickly realise " +
                 "that it is a Russian astronaut." +
                 "\n\nYou duck for cover as he opens fire on you!" +
-                "\n\nYour only option is to kill the hostile Astronaut.\n\n Press any options to continue. ";
-        string txt2;
+                "\n\nYour only option is to kill the hostile Astronaut.\n\n Press option 1 to continue. ";
+        string txt2 = "You set out for the local camp, quickly leaving the crash site before hostiles might arrive. Luckily, the weather is okay and you might be able to make it to the camp before nightfall. Suddenly, you hear a loud screech and as you turn your head, you see a creature running towards you. You realize that this is most likely one of the native Aliens which lives on Mars.." +
+                "\n\nClick action 2 to continue.";
         string txt3;
 
 
@@ -69,23 +71,7 @@ namespace SpaceForceRPG.Screens
             len = txt.Length;
             timer1.Start();
             timer2.Start();
-
-            if (richTextBox1.Text.Length == txt.Length)
-            {
-                timer1.Stop();
-            }
-            else
-            {
-
-            }
-            if (richTextBox1.Text.Length == txt1.Length)
-            {
-                timer2.Stop();
-            }
-            else
-            {
-
-            }
+            timer3.Start();
         }
         void on_timer_event(object sender, EventArgs e)
         {
@@ -136,7 +122,7 @@ namespace SpaceForceRPG.Screens
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (timer1.Enabled == false)
+            if (timer1.Enabled == false && counter2 <= 315)
             {
                 clickCounter++;
             }
@@ -144,7 +130,7 @@ namespace SpaceForceRPG.Screens
             {
 
             }
-            if(timer2.Enabled == false && timer1.Enabled == false)
+            if(timer2.Enabled == false && timer1.Enabled == false && counter2 <= 315)
             {
                 clickCounter2++;
             }
@@ -152,7 +138,7 @@ namespace SpaceForceRPG.Screens
             {
 
             }
-            if (clickCounter == 1)
+            if (clickCounter == 1 && counter2 <= 315)
             {
                 clearTextBox();
                 timer1.Stop();
@@ -168,23 +154,30 @@ namespace SpaceForceRPG.Screens
 
                 }
             }
-            else if (clickCounter2 == 2)
+            else if (clickCounter2 == 2 && counter2 <= 315)
             {
                 timer1.Stop();
                 timer2.Stop();
-                BattleScreen form1 = new BattleScreen(player, 1);
+                BattleScreen form1 = new BattleScreen(player, 3);
                 form1.Show();
                 this.Hide();
             }
         }
         private void DialogueScreen_Click(object sender, EventArgs e)   // to skip text
         {
-            if (clickCounter == 0)
+            if (clickCounter == 0 && button2Click != 1)
             {
                 timer1.Stop();
                 richTextBox1.Text = txt;
             }
-            else if (clickCounter >= 1)
+            else if (button2Click == 1)
+            {
+                timer1.Stop();
+                timer2.Stop();
+                timer3.Stop();
+                richTextBox1.Text = txt2;
+            }
+            else if (clickCounter == 1 && button2Click != 1)
             {
                 timer2.Stop();
                 richTextBox1.Text = txt1;
@@ -192,17 +185,46 @@ namespace SpaceForceRPG.Screens
         }
 
         int formClick;
-        int button2Click;
+
         int button3Click;
 
         private void option2_Click(object sender, EventArgs e)
         {
-            
+            if(richTextBox1.Text.Length == txt.Length && button2Click != 1)
+            {
+                len2 = txt2.Length;
+                button2Click++;
+                txt = txt2;
+                timer1.Stop();
+                timer2.Stop();
+                timer3.Start();
+            }
+            else if(button2Click == 1 && richTextBox1.Text.Length == txt.Length)
+            {
+                BattleScreen form1 = new BattleScreen(player, 2);
+                form1.Show();
+                this.Hide();
+            }
         }
 
         private void option3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            counter2++;
+
+            if (counter2 > len2 - 1)
+            {
+                timer3.Stop();
+            }
+            else
+            {
+
+            }
+            richTextBox1.Text = txt.Substring(0, counter2 - 1);
         }
     }
 }

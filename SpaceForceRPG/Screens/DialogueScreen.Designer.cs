@@ -156,6 +156,11 @@
             this.option1.UseVisualStyleBackColor = true;
             this.option1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer3
+            // 
+            this.timer3.Interval = 25;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
             // DialogueScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
