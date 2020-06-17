@@ -1,5 +1,6 @@
 ﻿using SpaceForceRPG.Classes;
 using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace SpaceForceRPG.Screens
@@ -12,8 +13,10 @@ namespace SpaceForceRPG.Screens
         int clickCounter2 = 0;              // controls actions in second phase
 
         int button2Click;
+        int currentState = 0;
+        int type = 0;
 
-        public DialogueScreen(Player player)
+        public DialogueScreen(Player player, int type)
         {
             InitializeComponent();                      
             // Timer for scrolling text.
@@ -28,6 +31,23 @@ namespace SpaceForceRPG.Screens
             timer1.Enabled = true;
             this.player = player;
             healthbar.Value = player.GetHealth();
+
+            if(type == 2)   // Killed Alien.
+            {
+                currentState = 2;
+                txt = txt3;
+                txt1 = txt4;
+
+            }
+            else if(type == 3)  // Killed Russian.
+            {
+                currentState = 3;
+            }
+            else if (type == 1)     // Killed Cyborg.
+            {
+                currentState = 1;
+                txt = txt5;
+            }
         }
 
         int counter = 0;
@@ -52,7 +72,13 @@ namespace SpaceForceRPG.Screens
                 "\n\nYour only option is to kill the hostile Astronaut.\n\n Press option 1 to continue. ";
         string txt2 = "You set out for the local camp, quickly leaving the crash site before hostiles might arrive. Luckily, the weather is okay and you might be able to make it to the camp before nightfall. Suddenly, you hear a loud screech and as you turn your head, you see a creature running towards you. You realize that this is most likely one of the native Aliens which lives on Mars.." +
                 "\n\nClick action 2 to continue.";
-        string txt3;
+        string txt3 = "The alien shrieks as you slay him and proceeds to collapse to the ground. Now that he is dead, you could continue to the camp, before you might meet other aliens who had heard the fight from earlier. You could also loot the body quickly, to possibly use his weapons or tools in the future." +
+                "\n\n1. Continue to the camp and don't bother looting the corpse." +
+                "\n\n2. Loot the corpse at the risk of meeting more aliens.";
+        string txt4 = "As you continue down the path, you see the camp in the distance! Unfortunately, a Cyborg blocks the path ahead and you will be forced to fight him." +
+                "\n\nPress action 1 to continue.";
+        string txt5 = "With the Cyborg slain, you are finally able to enter the camp. The camp is safe with lots of resources; you have survived for now, but who knows whether the camp can withstand the hostile environment around it." +
+                "\n\nYou have won the game.";
 
 
         public void clearTextBox()  // Method to clear the texbox whenever called.
@@ -68,24 +94,39 @@ namespace SpaceForceRPG.Screens
         }
         private void DialogueScreen_Load(object sender, EventArgs e)
         {
-            len = txt.Length;
-            timer1.Start();
-            timer2.Start();
-            timer3.Start();
-        }
-        void on_timer_event(object sender, EventArgs e)
-        {
-            if (richTextBox1.Text.Length == txt.Length)
+            if(type == 0)
             {
-                timer1.Stop();
+                len = txt.Length;
+                timer1.Start();
+                timer2.Start();
+                timer3.Start();
             }
             else
             {
 
             }
-            if (richTextBox1.Text.Length == txt1.Length)
+
+        }
+        void on_timer_event(object sender, EventArgs e)
+        {
+            if (type == 0)
             {
-                timer2.Stop();
+                if (richTextBox1.Text.Length == txt.Length)
+                {
+                    timer1.Stop();
+                }
+                else
+                {
+
+                }
+                if (richTextBox1.Text.Length == txt1.Length)
+                {
+                    timer2.Stop();
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -94,137 +135,199 @@ namespace SpaceForceRPG.Screens
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            counter1++;
-
-            if (counter1 > len1 - 1)
+            if (type == 0)
             {
-                timer2.Stop();
+                counter1++;
+
+                if (counter1 > len1 - 1)
+                {
+                    timer2.Stop();
+                }
+                else
+                {
+
+                }
+                richTextBox1.Text = txt1.Substring(0, counter1);
             }
             else
             {
 
             }
-            richTextBox1.Text = txt1.Substring(0, counter1);
+
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            counter++;
+            if (type == 0)
+            {
+                counter++;
 
-            if (counter > len - 1)
-            {
-                timer1.Stop();
-            }
-            else
-            {
-
-            }
-            richTextBox1.Text = txt.Substring(0, counter);
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (timer1.Enabled == false && counter2 <= 315)
-            {
-                clickCounter++;
-            }
-            else
-            {
-
-            }
-            if(timer2.Enabled == false && timer1.Enabled == false && counter2 <= 315)
-            {
-                clickCounter2++;
-            }
-            else
-            {
-
-            }
-            if (clickCounter == 1 && counter2 <= 315)
-            {
-                clearTextBox();
-                timer1.Stop();
-                timer2.Start();
-                len1 = txt1.Length;
-                if (counter1 == txt1.Length)
+                if (counter > len - 1)
                 {
-
                     timer1.Stop();
                 }
                 else
                 {
 
                 }
-            }
-            else if (clickCounter2 == 2 && counter2 <= 315)
-            {
-                timer1.Stop();
-                timer2.Stop();
-                BattleScreen form1 = new BattleScreen(player, 3);
-                form1.Show();
-                this.Hide();
-            }
-        }
-        private void DialogueScreen_Click(object sender, EventArgs e)   // to skip text
-        {
-            if (clickCounter == 0 && button2Click != 1)
-            {
-                timer1.Stop();
-                richTextBox1.Text = txt;
-            }
-            else if (button2Click == 1)
-            {
-                timer1.Stop();
-                timer2.Stop();
-                timer3.Stop();
-                richTextBox1.Text = txt2;
-            }
-            else if (clickCounter == 1 && button2Click != 1)
-            {
-                timer2.Stop();
-                richTextBox1.Text = txt1;
-            }
-        }
-
-        int formClick;
-
-        int button3Click;
-
-        private void option2_Click(object sender, EventArgs e)
-        {
-            if(richTextBox1.Text.Length == txt.Length && button2Click != 1)
-            {
-                len2 = txt2.Length;
-                button2Click++;
-                txt = txt2;
-                timer1.Stop();
-                timer2.Stop();
-                timer3.Start();
-            }
-            else if(button2Click == 1 && richTextBox1.Text.Length == txt.Length)
-            {
-                BattleScreen form1 = new BattleScreen(player, 2);
-                form1.Show();
-                this.Hide();
-            }
-        }
-
-        private void option3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            counter2++;
-
-            if (counter2 > len2 - 1)
-            {
-                timer3.Stop();
+                richTextBox1.Text = txt.Substring(0, counter);
             }
             else
             {
 
             }
-            richTextBox1.Text = txt.Substring(0, counter2 - 1);
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            if (type == 0 && currentState != 1)
+            {
+                if (timer1.Enabled == false && counter2 <= 315)
+                {
+                    clickCounter++;
+                }
+                else
+                {
+
+                }
+                if (timer2.Enabled == false && timer1.Enabled == false && counter2 <= 315)
+                {
+                    clickCounter2++;
+                }
+                else
+                {
+
+                }
+                if (clickCounter == 1 && counter2 <= 315)
+                {
+                    clearTextBox();
+                    timer1.Stop();
+                    timer2.Start();
+                    len1 = txt1.Length;
+                    if (counter1 == txt1.Length)
+                    {
+
+                        timer1.Stop();
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else if (clickCounter2 == 2 && counter2 <= 315)
+                {
+                    timer1.Stop();
+                    timer2.Stop();
+                    if(currentState == 0)
+                    {
+                        BattleScreen form1 = new BattleScreen(player, 3);
+                        form1.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        BattleScreen form1 = new BattleScreen(player, 1);
+                        form1.Show();
+                        this.Hide();
+                    }
+
+                }
+                else if (button2Click == 1 && richTextBox1.Text.Length == txt.Length)
+                {
+                    MessageBox.Show("Please select option 2");
+                }
+            }
+            else if (currentState == 1)
+            {
+                this.Close();
+            }            
+        }
+        private void DialogueScreen_Click(object sender, EventArgs e)   // to skip text
+        {
+            if (type == 0)
+            {
+                if (clickCounter == 0 && button2Click != 1)
+                {
+                    timer1.Stop();
+                    richTextBox1.Text = txt;
+                }
+                else if (button2Click == 1)
+                {
+                    timer1.Stop();
+                    timer2.Stop();
+                    timer3.Stop();
+                    richTextBox1.Text = txt2;
+                }
+                else if (clickCounter == 1 && button2Click != 1)
+                {
+                    timer2.Stop();
+                    richTextBox1.Text = txt1;
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void option2_Click(object sender, EventArgs e)
+        {
+            if (type == 0 && currentState != 1)
+            {
+                if (richTextBox1.Text.Length == txt.Length && button2Click != 1)
+                {
+                    len2 = txt2.Length;
+                    button2Click++;
+                    txt = txt2;
+                    timer1.Stop();
+                    timer2.Stop();
+                    timer3.Start();
+                }
+                else if (button2Click == 1 && richTextBox1.Text.Length == txt.Length)
+                {
+                    BattleScreen form1 = new BattleScreen(player, 2);
+                    form1.Show();
+                    this.Hide();
+                }
+            }
+            else if (currentState == 1)
+            {
+                this.Close();
+            }
+        }
+
+        private void option3_Click(object sender, EventArgs e)
+        {
+            if (type == 0 && currentState != 1)
+            {
+                MessageBox.Show("Please select option 1 or 2.");
+            }
+            else if (currentState == 1)
+            {
+                this.Close();
+            }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (type == 0)
+            {
+                counter2++;
+
+                if (counter2 > len2 - 1)
+                {
+                    timer3.Stop();
+                }
+                else
+                {
+
+                }
+                richTextBox1.Text = txt.Substring(0, counter2 - 1);
+            }
+            else
+            {
+
+            }
         }
 
         private void restButton_Click(object sender, EventArgs e)

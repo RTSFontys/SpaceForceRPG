@@ -23,7 +23,7 @@ namespace SpaceForceRPG
         private void PlayBtn(object sender, EventArgs e)
         {
             this.Hide();
-            DialogueScreen form1 = new DialogueScreen(player);
+            DialogueScreen form1 = new DialogueScreen(player, 0);
             form1.Show();
             
         }

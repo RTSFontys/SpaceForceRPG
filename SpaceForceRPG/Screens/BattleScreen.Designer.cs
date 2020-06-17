@@ -39,6 +39,7 @@
             this.Attack2Btn = new System.Windows.Forms.Button();
             this.Attack1Btn = new System.Windows.Forms.Button();
             this.AttackTimer = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.enemyPic_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPic_pb)).BeginInit();
             this.SuspendLayout();
@@ -175,5 +176,6 @@
         private System.Windows.Forms.ProgressBar playerHP_bar;
         private System.Windows.Forms.ProgressBar enemyPH_Bar;
         private System.Windows.Forms.Timer AttackTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }
