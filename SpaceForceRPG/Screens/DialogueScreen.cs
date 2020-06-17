@@ -226,5 +226,23 @@ namespace SpaceForceRPG.Screens
             }
             richTextBox1.Text = txt.Substring(0, counter2 - 1);
         }
+
+        private void restButton_Click(object sender, EventArgs e)
+        {
+            if(player.GetHealth() != player.GetMaxHealth())
+            {
+                do
+                {
+                    int health = player.GetHealth();
+                    player.SetHealth(health += 1);
+                    healthbar.Value = player.GetHealth();
+                    int ammo = player.GetAmmo();
+                    player.SetAmmo(ammo += 1);
+                    int grenades = player.GetGrenades();
+                    player.SetGrenades(grenades);
+                } while (player.GetHealth() != player.GetMaxHealth() && player.GetAmmo() != player.GetMaxAmmo() && player.GetGrenades() != player.GetMaxGrenades());
+            }
+           
+        }
     }
 }

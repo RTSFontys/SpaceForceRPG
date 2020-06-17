@@ -45,10 +45,10 @@
             // 
             // healthbar
             // 
-            this.healthbar.Location = new System.Drawing.Point(9, 30);
-            this.healthbar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.healthbar.Location = new System.Drawing.Point(12, 37);
+            this.healthbar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.healthbar.Name = "healthbar";
-            this.healthbar.Size = new System.Drawing.Size(133, 32);
+            this.healthbar.Size = new System.Drawing.Size(177, 39);
             this.healthbar.TabIndex = 0;
             // 
             // label1
@@ -56,10 +56,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Image = global::SpaceForceRPG.Properties.Resources.greenButton;
-            this.label1.Location = new System.Drawing.Point(9, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.Size = new System.Drawing.Size(113, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Health 0/0";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,11 +66,11 @@
             // richTextBox1
             // 
             this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(249, 12);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Location = new System.Drawing.Point(332, 15);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1.Size = new System.Drawing.Size(333, 475);
+            this.richTextBox1.Size = new System.Drawing.Size(443, 584);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -80,20 +79,19 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Image = global::SpaceForceRPG.Properties.Resources.redButton;
-            this.label2.Location = new System.Drawing.Point(9, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 21);
+            this.label2.Size = new System.Drawing.Size(113, 26);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ammo 0/0";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(9, 97);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBar1.Location = new System.Drawing.Point(12, 119);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(134, 32);
+            this.progressBar1.Size = new System.Drawing.Size(179, 39);
             this.progressBar1.TabIndex = 4;
             // 
             // timer1
@@ -111,19 +109,21 @@
             // restButton
             // 
             this.restButton.Image = global::SpaceForceRPG.Properties.Resources.restButton;
-            this.restButton.Location = new System.Drawing.Point(34, 448);
+            this.restButton.Location = new System.Drawing.Point(45, 551);
+            this.restButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.restButton.Name = "restButton";
-            this.restButton.Size = new System.Drawing.Size(183, 39);
+            this.restButton.Size = new System.Drawing.Size(244, 48);
             this.restButton.TabIndex = 10;
             this.restButton.UseVisualStyleBackColor = true;
+            this.restButton.Click += new System.EventHandler(this.restButton_Click);
             // 
             // option3
             // 
             this.option3.Image = global::SpaceForceRPG.Properties.Resources.Action_3;
-            this.option3.Location = new System.Drawing.Point(607, 288);
-            this.option3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option3.Location = new System.Drawing.Point(809, 354);
+            this.option3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option3.Name = "option3";
-            this.option3.Size = new System.Drawing.Size(183, 40);
+            this.option3.Size = new System.Drawing.Size(244, 49);
             this.option3.TabIndex = 7;
             this.option3.UseVisualStyleBackColor = true;
             this.option3.Click += new System.EventHandler(this.option3_Click);
@@ -131,10 +131,10 @@
             // option2
             // 
             this.option2.Image = global::SpaceForceRPG.Properties.Resources.Action_2;
-            this.option2.Location = new System.Drawing.Point(607, 245);
-            this.option2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option2.Location = new System.Drawing.Point(809, 302);
+            this.option2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option2.Name = "option2";
-            this.option2.Size = new System.Drawing.Size(183, 40);
+            this.option2.Size = new System.Drawing.Size(244, 49);
             this.option2.TabIndex = 6;
             this.option2.UseVisualStyleBackColor = true;
             this.option2.Click += new System.EventHandler(this.option2_Click);
@@ -142,10 +142,10 @@
             // option1
             // 
             this.option1.Image = global::SpaceForceRPG.Properties.Resources.Action_1;
-            this.option1.Location = new System.Drawing.Point(607, 201);
-            this.option1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option1.Location = new System.Drawing.Point(809, 247);
+            this.option1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option1.Name = "option1";
-            this.option1.Size = new System.Drawing.Size(183, 40);
+            this.option1.Size = new System.Drawing.Size(244, 49);
             this.option1.TabIndex = 5;
             this.option1.UseVisualStyleBackColor = true;
             this.option1.Click += new System.EventHandler(this.button1_Click);
@@ -157,10 +157,10 @@
             // 
             // DialogueScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceForceRPG.Properties.Resources.DialogueScreenAchtergrond;
-            this.ClientSize = new System.Drawing.Size(818, 497);
+            this.ClientSize = new System.Drawing.Size(1091, 612);
             this.Controls.Add(this.restButton);
             this.Controls.Add(this.option3);
             this.Controls.Add(this.option2);
@@ -171,7 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.healthbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DialogueScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
