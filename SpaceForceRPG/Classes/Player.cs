@@ -13,6 +13,11 @@ namespace SpaceForceRPG.Classes
         private int protection;
         private int gender;
 
+        private int enemiesKilled;
+        private int benEnemiesKilled;
+        private string benTypeEnemiesKilled;
+
+
         public Player(string playerName, int gender) : base(100, 1, 1, 100, true)
         {
             this.playerName = playerName;
@@ -43,6 +48,32 @@ namespace SpaceForceRPG.Classes
         public void Regen()
         {
             SetHealth(GetMaxHealth());
+        }
+
+        public void SetEnemiesKilled(int number)
+        {
+            this.enemiesKilled += number;
+        }
+
+        public int getEnemiesKilled()
+        {
+            return this.enemiesKilled;
+        }
+
+        public void benSetEnemiesKilled(int number, string enemy)
+        {
+            this.benEnemiesKilled += number;
+            this.benTypeEnemiesKilled += enemy;
+        }
+
+        public int benGetEnemiesKilled()
+        {
+            return this.benEnemiesKilled;
+        }
+
+        public string benGetTypeEnemiesKilled()
+        {
+            return this.benTypeEnemiesKilled;
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace SpaceForceRPG.Screens
 {
@@ -33,7 +34,7 @@ namespace SpaceForceRPG.Screens
             this.player = player;
             InitializeComponent();
             int gender = player.GetGender();
-            if(gender == 1)
+            if(gender == 1)     // Determines which assets to load for the player, dependent on their current gender.
             {
                 playerPic_pb.Image = Resources.player_male;
                 playerShooting = Resources.player_male_shooting;
@@ -51,7 +52,7 @@ namespace SpaceForceRPG.Screens
                 playerTakingDamage = Resources.player_female_damaged;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-            if (type == 1)
+            if (type == 1)      // Determines which enemy to load, dependent on where they are in the story.
             {
                 GenerateCyborg(player);
                 currentEnemy = cyborg;
@@ -67,8 +68,6 @@ namespace SpaceForceRPG.Screens
                 currentEnemy = russian;
             }
             playerHP_bar.Value = player.GetHealth();
-
-
         }
         
         private void GenerateCyborg(Player player)
@@ -212,6 +211,28 @@ namespace SpaceForceRPG.Screens
             {
                 enemyPH_Bar.Value = 0;
                 MessageBox.Show("You defeated the enemy!");
+
+                player.SetEnemiesKilled(1);
+
+                if (currentEnemy == cyborg) // 1
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 1);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
+
+                if (currentEnemy == alien)  // 2
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 2);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
+                if (currentEnemy == russian) // 3
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 3);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
             }
             else
             {
@@ -232,6 +253,27 @@ namespace SpaceForceRPG.Screens
             {
                 enemyPH_Bar.Value = 0;
                 MessageBox.Show("You defeated the enemy!");
+                player.SetEnemiesKilled(1);
+
+                if (currentEnemy == cyborg) // 1
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 1);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
+
+                if (currentEnemy == alien)  // 2
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 2);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
+                if (currentEnemy == russian) // 3
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 3);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
             }
             else
             {
@@ -254,6 +296,27 @@ namespace SpaceForceRPG.Screens
             {
                 enemyPH_Bar.Value = 0;
                 MessageBox.Show("You defeated the enemy!");
+                player.SetEnemiesKilled(1);
+
+                if (currentEnemy == cyborg) // 1
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 1);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
+
+                if (currentEnemy == alien)  // 2
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 2);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
+                if (currentEnemy == russian) // 3
+                {
+                    DialogueScreen dialogueScreen = new DialogueScreen(player, 3);
+                    this.Hide();
+                    dialogueScreen.Show();
+                }
             }
             else
             {
