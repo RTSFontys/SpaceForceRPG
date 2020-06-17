@@ -39,7 +39,7 @@
             this.Attack2Btn = new System.Windows.Forms.Button();
             this.Attack1Btn = new System.Windows.Forms.Button();
             this.AttackTimer = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.afterAttack = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.enemyPic_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPic_pb)).BeginInit();
             this.SuspendLayout();
@@ -134,6 +134,11 @@
             this.Attack1Btn.UseVisualStyleBackColor = true;
             this.Attack1Btn.Click += new System.EventHandler(this.Attack1Btn_Click);
             // 
+            // afterAttack
+            // 
+            this.afterAttack.Interval = 10000;
+            this.afterAttack.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // BattleScreen
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -176,6 +181,6 @@
         private System.Windows.Forms.ProgressBar playerHP_bar;
         private System.Windows.Forms.ProgressBar enemyPH_Bar;
         private System.Windows.Forms.Timer AttackTimer;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer afterAttack;
     }
 }

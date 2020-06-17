@@ -6,11 +6,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Resources;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Threading.Tasks.Task;
 
 namespace SpaceForceRPG.Screens
 {
@@ -33,8 +37,17 @@ namespace SpaceForceRPG.Screens
         {
             this.player = player;
             InitializeComponent();
+
             int gender = player.GetGender();
-            if(gender == 1)     // Determines which assets to load for the player, dependent on their current gender.
+
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Tick += new EventHandler(on_timer_event);
+            timer.Interval = 10000;
+            timer.Enabled = false;
+
+
+
+            if (gender == 1)     // Determines which assets to load for the player, dependent on their current gender.
             {
                 playerPic_pb.Image = Resources.player_male;
                 playerShooting = Resources.player_male_shooting;
@@ -205,6 +218,7 @@ namespace SpaceForceRPG.Screens
         
         private void Attack1Btn_Click(object sender, EventArgs e)
         {
+            playerPic_pb.Enabled = true;
             int curEnemyHP = currentEnemy.GetHealth();
             curEnemyHP -= 10;
             if (curEnemyHP <= 0)
@@ -247,6 +261,7 @@ namespace SpaceForceRPG.Screens
 
         private void Attack2Btn_Click(object sender, EventArgs e)
         {
+            playerPic_pb.Enabled = true;
             int curEnemyHP = currentEnemy.GetHealth();
             curEnemyHP -= 20;
             if (curEnemyHP <= 0)
@@ -290,6 +305,8 @@ namespace SpaceForceRPG.Screens
 
         private void AttackBtn3_Click(object sender, EventArgs e)
         {
+
+            playerPic_pb.Enabled = true;
             int curEnemyHP = currentEnemy.GetHealth();
             curEnemyHP -= 30;
             if (curEnemyHP <= 0)
@@ -325,15 +342,21 @@ namespace SpaceForceRPG.Screens
                 playerPic_pb.Image = playerThrowing;
                 playerPic_pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 enemyPic_pb.Image = enemyTakingDamage;
+
                 EnemyTurn();
             }
+
+
         }
-        
+
         private void EnemyTurn()
         {
+            afterAttack.Start();
             Attack1Btn.Enabled = false;
             Attack2Btn.Enabled = false;
             AttackBtn3.Enabled = false;
+            afterAttack.Stop();
+
             int number = currentEnemy.GetDamage();
             int playerHP = player.GetHealth();
             if (number == 1)
@@ -370,14 +393,18 @@ namespace SpaceForceRPG.Screens
                 Attack2Btn.Enabled = true;
                 AttackBtn3.Enabled = true;
             }
-
-
-
-
+        }
+        void on_timer_event(object sender, EventArgs e)
+        {
 
         }
 
         private void BattleScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }
