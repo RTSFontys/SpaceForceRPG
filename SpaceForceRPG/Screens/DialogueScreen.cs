@@ -343,7 +343,7 @@ namespace SpaceForceRPG.Screens
                     player.SetAmmo(ammo += 1);
                     int grenades = player.GetGrenades();
                     player.SetGrenades(grenades);
-                } while (player.GetHealth() != player.GetMaxHealth() && player.GetAmmo() != player.GetMaxAmmo() && player.GetGrenades() != player.GetMaxGrenades());
+                } while (player.GetHealth() != player.GetMaxHealth());
             }
            
         }

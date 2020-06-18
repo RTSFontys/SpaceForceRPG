@@ -321,5 +321,11 @@
   <ItemGroup>
     <None Include="Resources\Font.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BattleScreenAchtergrond.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BattleScreenAchtergrond %282%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
